@@ -20,7 +20,7 @@ select c_last_name
 	else null 
 	end)  > 1.2
     and date_dim.d_year in (2000,2000+1,2000+2)
-    and store.s_county in ('Ziebach County','Williamson County','Walker County','Williamson County',
+    and store.s_county in ('Ziebach County','Williamson County','Walker County','Walker County',
                            'Ziebach County','Ziebach County','Ziebach County','Ziebach County')
     group by ss_ticket_number,ss_customer_sk) dn,customer
     where ss_customer_sk = c_customer_sk

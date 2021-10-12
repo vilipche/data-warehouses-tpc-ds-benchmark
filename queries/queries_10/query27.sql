@@ -13,7 +13,7 @@ select  i_item_id,
        cd_marital_status = 'M' and
        cd_education_status = 'Advanced Degree' and
        d_year = 1998 and
-       s_state in ('TN','AL', 'SD', 'TN', 'SD', 'SD')
+       s_state in ('TN','AL', 'SD', 'AL', 'SD', 'SD')
  group by rollup (i_item_id, s_state)
  order by i_item_id
          ,s_state

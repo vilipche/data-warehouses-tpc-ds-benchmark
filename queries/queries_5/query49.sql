@@ -121,6 +121,6 @@ select  channel, item, return_ratio, return_rank, currency_rank from
  or 
  store.currency_rank <= 10
  )
- )
+ ) AS temp
  order by 1,4,5,2
  limit 100;
