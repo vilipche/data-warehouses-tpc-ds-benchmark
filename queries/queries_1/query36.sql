@@ -13,15 +13,15 @@ select
    ,item
    ,store
  where
-    d1.d_year = 2000 
+    d1.d_year = 2002 
  and d1.d_date_sk = ss_sold_date_sk
  and i_item_sk  = ss_item_sk 
  and s_store_sk  = ss_store_sk
- and s_state in ('TN','TN','TN','TN',
-                 'TN','TN','TN','TN')
+ and s_state in ('SD','TN','GA','SC',
+                 'MO','AL','MI','OH')
  group by rollup(i_category,i_class)
  order by
    lochierarchy desc
-  ,case when lochierarchy = 0 then i_category end
+  ,case when grouping(i_category)+grouping(i_class) = 0 then i_category end
   ,rank_within_parent
   limit 100;

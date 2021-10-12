@@ -9,11 +9,11 @@ select  i_item_id,
        ss_item_sk = i_item_sk and
        ss_store_sk = s_store_sk and
        ss_cdemo_sk = cd_demo_sk and
-       cd_gender = 'M' and
-       cd_marital_status = 'W' and
+       cd_gender = 'F' and
+       cd_marital_status = 'D' and
        cd_education_status = 'Secondary' and
        d_year = 1999 and
-       s_state in ('TN','TN', 'TN', 'TN', 'TN', 'TN')
+       s_state in ('MO','AL', 'MI', 'TN', 'LA', 'SC')
  group by rollup (i_item_id, s_state)
  order by i_item_id
          ,s_state

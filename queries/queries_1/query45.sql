@@ -11,7 +11,7 @@ select  ca_zip, ca_city, sum(ws_sales_price)
                              )
  	    )
  	and ws_sold_date_sk = d_date_sk
- 	and d_qoy = 1 and d_year = 2000
+ 	and d_qoy = 2 and d_year = 2000
  group by ca_zip, ca_city
  order by ca_zip, ca_city
  limit 100;

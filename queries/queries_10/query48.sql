@@ -1,15 +1,15 @@
 select sum (ss_quantity)
  from store_sales, store, customer_demographics, customer_address, date_dim
  where s_store_sk = ss_store_sk
- and  ss_sold_date_sk = d_date_sk and d_year = 1998
+ and  ss_sold_date_sk = d_date_sk and d_year = 1999
  and  
  (
   (
    cd_demo_sk = ss_cdemo_sk
    and 
-   cd_marital_status = 'M'
+   cd_marital_status = 'U'
    and 
-   cd_education_status = 'Unknown'
+   cd_education_status = 'Primary'
    and 
    ss_sales_price between 100.00 and 150.00  
    )
@@ -17,9 +17,9 @@ select sum (ss_quantity)
   (
   cd_demo_sk = ss_cdemo_sk
    and 
-   cd_marital_status = 'S'
+   cd_marital_status = 'W'
    and 
-   cd_education_status = '4 yr Degree'
+   cd_education_status = 'College'
    and 
    ss_sales_price between 50.00 and 100.00   
   )
@@ -41,7 +41,7 @@ select sum (ss_quantity)
   and
   ca_country = 'United States'
   and
-  ca_state in ('ID', 'IA', 'CA')
+  ca_state in ('MD', 'MN', 'IA')
   and ss_net_profit between 0 and 2000  
   )
  or
@@ -49,7 +49,7 @@ select sum (ss_quantity)
   and
   ca_country = 'United States'
   and
-  ca_state in ('IN', 'WI', 'IL')
+  ca_state in ('VA', 'IL', 'TX')
   and ss_net_profit between 150 and 3000 
   )
  or
@@ -57,7 +57,7 @@ select sum (ss_quantity)
   and
   ca_country = 'United States'
   and
-  ca_state in ('TX', 'WA', 'MN')
+  ca_state in ('MI', 'WI', 'IN')
   and ss_net_profit between 50 and 25000 
   )
  )

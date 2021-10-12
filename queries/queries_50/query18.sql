@@ -19,10 +19,10 @@ select  i_item_id,
        cd1.cd_education_status = 'Advanced Degree' and
        c_current_cdemo_sk = cd2.cd_demo_sk and
        c_current_addr_sk = ca_address_sk and
-       c_birth_month in (3,6,8,12,5,7) and
-       d_year = 2000 and
-       ca_state in ('IL','NY','MI'
-                   ,'IA','NC','ND','KS')
+       c_birth_month in (10,7,8,4,1,2) and
+       d_year = 1998 and
+       ca_state in ('WA','GA','NC'
+                   ,'ME','WY','OK','IN')
  group by rollup (i_item_id, ca_country, ca_state, ca_county)
  order by ca_country,
         ca_state, 

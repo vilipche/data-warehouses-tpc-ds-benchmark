@@ -1,0 +1,30 @@
+Change +- X days -> +- INTERVAL 'X days':
+    5
+    12
+    16
+    20
+    21
+    32
+    37
+    40
+    77
+    80
+    82
+    92
+    94
+    95
+    98
+
+Add alias to subquery -> AS temp:
+    2
+    14
+    23
+    49
+
+Change lochierachy -> grouping(i_category)+grouping(i_class) in ORDER BY CASE clause
+    36
+    70
+    86
+
+Add as in last select coalesce(returns, 0) returns -> coalesce(returns, 0) as returns
+    77

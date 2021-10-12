@@ -15,14 +15,14 @@ select  i_item_id,
        cs_item_sk = i_item_sk and
        cs_bill_cdemo_sk = cd1.cd_demo_sk and
        cs_bill_customer_sk = c_customer_sk and
-       cd1.cd_gender = 'M' and 
-       cd1.cd_education_status = 'Unknown' and
+       cd1.cd_gender = 'F' and 
+       cd1.cd_education_status = 'Advanced Degree' and
        c_current_cdemo_sk = cd2.cd_demo_sk and
        c_current_addr_sk = ca_address_sk and
-       c_birth_month in (11,9,5,10,6,12) and
-       d_year = 2001 and
-       ca_state in ('PA','MT','KY'
-                   ,'IA','OR','MI','TX')
+       c_birth_month in (10,7,8,4,1,2) and
+       d_year = 1998 and
+       ca_state in ('WA','GA','NC'
+                   ,'ME','WY','OK','IN')
  group by rollup (i_item_id, ca_country, ca_state, ca_county)
  order by ca_country,
         ca_state, 

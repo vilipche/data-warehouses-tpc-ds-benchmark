@@ -17,11 +17,11 @@ with my_customers as (
          customer
  where   sold_date_sk = d_date_sk
          and item_sk = i_item_sk
-         and i_category = 'Music'
-         and i_class = 'country'
+         and i_category = 'Women'
+         and i_class = 'maternity'
          and c_customer_sk = cs_or_ws_sales.customer_sk
-         and d_moy = 1
-         and d_year = 1999
+         and d_moy = 5
+         and d_year = 1998
  )
  , my_revenue as (
  select c_customer_sk,
@@ -37,9 +37,9 @@ with my_customers as (
         and ss_sold_date_sk = d_date_sk
         and c_customer_sk = ss_customer_sk
         and d_month_seq between (select distinct d_month_seq+1
-                                 from   date_dim where d_year = 1999 and d_moy = 1)
+                                 from   date_dim where d_year = 1998 and d_moy = 5)
                            and  (select distinct d_month_seq+3
-                                 from   date_dim where d_year = 1999 and d_moy = 1)
+                                 from   date_dim where d_year = 1998 and d_moy = 5)
  group by c_customer_sk
  )
  , segments as

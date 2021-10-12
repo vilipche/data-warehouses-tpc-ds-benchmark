@@ -1,4 +1,4 @@
-select  ca_zip, ca_state, sum(ws_sales_price)
+select  ca_zip, ca_city, sum(ws_sales_price)
  from web_sales, customer, customer_address, date_dim, item
  where ws_bill_customer_sk = c_customer_sk
  	and c_current_addr_sk = ca_address_sk 
@@ -11,7 +11,7 @@ select  ca_zip, ca_state, sum(ws_sales_price)
                              )
  	    )
  	and ws_sold_date_sk = d_date_sk
- 	and d_qoy = 2 and d_year = 2001
- group by ca_zip, ca_state
- order by ca_zip, ca_state
+ 	and d_qoy = 2 and d_year = 2000
+ group by ca_zip, ca_city
+ order by ca_zip, ca_city
  limit 100;

@@ -40,7 +40,7 @@ select c_last_name
       ,s_store_name
       ,sum(netpaid) paid
 from ssales
-where i_color = 'yellow'
+where i_color = 'beige'
 group by c_last_name
         ,c_first_name
         ,s_store_name
@@ -92,7 +92,7 @@ select c_last_name
       ,s_store_name
       ,sum(netpaid) paid
 from ssales
-where i_color = 'lawn'
+where i_color = 'blue'
 group by c_last_name
         ,c_first_name
         ,s_store_name

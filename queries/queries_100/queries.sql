@@ -1931,7 +1931,7 @@ select
  group by rollup(i_category,i_class)
  order by
    lochierarchy desc
-  ,case when lochierarchy = 0 then i_category end
+  ,case when grouping(i_category)+grouping(i_class) = 0 then i_category end
   ,rank_within_parent
   limit 100;
 
@@ -3660,7 +3660,7 @@ select
  group by rollup(s_state,s_county)
  order by
    lochierarchy desc
-  ,case when lochierarchy = 0 then s_state end
+  ,case when grouping(i_category)+grouping(i_class) = 0 then s_state end
   ,rank_within_parent
  limit 100;
 
@@ -4014,7 +4014,7 @@ with ss as
  select 'web channel' as channel
         , ws.wp_web_page_sk as id
         , sales
-        , coalesce(returns, 0) returns
+        , coalesce(returns, 0) as returns
         , (profit - coalesce(profit_loss,0)) as profit
  from   ws left join wr
         on  ws.wp_web_page_sk = wr.wp_web_page_sk
@@ -4443,7 +4443,7 @@ select
  group by rollup(i_category,i_class)
  order by
    lochierarchy desc,
-   case when lochierarchy = 0 then i_category end,
+   case when grouping(i_category)+grouping(i_class) = 0 then i_category end,
    rank_within_parent
  limit 100;
 

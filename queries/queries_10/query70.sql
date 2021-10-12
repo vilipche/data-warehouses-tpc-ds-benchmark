@@ -12,7 +12,7 @@ select
    ,date_dim       d1
    ,store
  where
-    d1.d_month_seq between 1186 and 1186+11
+    d1.d_month_seq between 1213 and 1213+11
  and d1.d_date_sk = ss_sold_date_sk
  and s_store_sk  = ss_store_sk
  and s_state in
@@ -20,7 +20,7 @@ select
                from  (select s_state as s_state,
  			    rank() over ( partition by s_state order by sum(ss_net_profit) desc) as ranking
                       from   store_sales, store, date_dim
-                      where  d_month_seq between 1186 and 1186+11
+                      where  d_month_seq between 1213 and 1213+11
  			    and d_date_sk = ss_sold_date_sk
  			    and s_store_sk  = ss_store_sk
                       group by s_state
@@ -30,6 +30,6 @@ select
  group by rollup(s_state,s_county)
  order by
    lochierarchy desc
-  ,case when lochierarchy = 0 then s_state end
+  ,case when grouping(i_category)+grouping(i_class) = 0 then s_state end
   ,rank_within_parent
  limit 100;
