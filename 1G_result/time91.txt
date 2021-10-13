@@ -1,0 +1,12 @@
+Timing is on.
+   call_center    | call_center_name |    manager     | returns_loss 
+------------------+------------------+----------------+--------------
+ AAAAAAAABAAAAAAA | NY Metro         | Bob Belcher    |       878.47
+ AAAAAAAAEAAAAAAA | North Midwest    | Larry Mccray   |       461.11
+ AAAAAAAABAAAAAAA | NY Metro         | Bob Belcher    |       422.72
+ AAAAAAAACAAAAAAA | Mid Atlantic     | Mark Hightower |       104.99
+ AAAAAAAAEAAAAAAA | North Midwest    | Larry Mccray   |        80.30
+ AAAAAAAACAAAAAAA | Mid Atlantic     | Mark Hightower |        41.77
+(6 rows)
+
+Time: 62,829 ms

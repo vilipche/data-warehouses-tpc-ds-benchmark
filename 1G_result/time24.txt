@@ -1,0 +1,11 @@
+Timing is on.
+ c_last_name | c_first_name | s_store_name | paid 
+-------------+--------------+--------------+------
+(0 rows)
+
+Time: 2567,057 ms (00:02,567)
+ c_last_name | c_first_name | s_store_name | paid 
+-------------+--------------+--------------+------
+(0 rows)
+
+Time: 2210,133 ms (00:02,210)

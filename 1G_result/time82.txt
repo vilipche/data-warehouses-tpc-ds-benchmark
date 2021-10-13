@@ -1,0 +1,7 @@
+Timing is on.
+    i_item_id     |                                              i_item_desc                                               | i_current_price 
+------------------+--------------------------------------------------------------------------------------------------------+-----------------
+ AAAAAAAAGHJBAAAA | Central feet could not find obviously colourful, french awards. Right able holes see immediately green |           42.58
+(1 row)
+
+Time: 114,721 ms

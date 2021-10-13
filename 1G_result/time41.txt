@@ -1,0 +1,6 @@
+Timing is on.
+ i_product_name 
+----------------
+(0 rows)
+
+Time: 2013,406 ms (00:02,013)
