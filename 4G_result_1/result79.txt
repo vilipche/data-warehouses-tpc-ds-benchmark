@@ -1,0 +1,106 @@
+Timing is on.
+          c_last_name           |     c_first_name     |  substr   | ss_ticket_number |   amt    |  profit   
+--------------------------------+----------------------+-----------+------------------+----------+-----------
+ Aaron                          | Georgia              | Fairview  |           709944 |    80.56 |    735.58
+ Aaron                          | Robert               | Fairview  |           486008 |   663.34 |  -9998.61
+ Abbott                         | Chang                | Fairview  |           213450 |  1584.97 |  -8740.48
+ Abbott                         | Sharon               | Oak Grove |           928007 |     0.00 | -12337.92
+ Abbott                         | William              | Oak Grove |           666303 |   358.66 |  -5046.70
+ Abel                           | Debra                | Midway    |           517637 |  1120.44 | -10183.29
+ Abel                           | Deidra               | Fairview  |           693343 |    75.49 |  -6339.37
+ Abraham                        | Sheri                | Fairview  |           117669 |   196.93 |  -6670.65
+ Abrams                         | Edgar                | Fairview  |           519236 |  4034.56 |  -4397.86
+ Abreu                          | Richard              | Fairview  |           539280 |  3551.72 | -19004.36
+ Acevedo                        | David                | Oak Grove |           408387 |   175.48 |  -4422.95
+ Acevedo                        | Gloria               | Fairview  |           554477 |  1228.99 |  -8628.30
+ Acevedo                        | Terrance             | Midway    |           426538 |  9210.60 | -24517.80
+ Acevedo                        | Trisha               | Fairview  |           736681 |    86.38 | -13646.91
+ Acevedo                        | Trisha               | Oak Grove |            93812 |  2303.16 |  -3297.05
+ Acevedo                        | Willie               | Oak Grove |           689920 |  2952.70 | -14089.22
+ Acosta                         | Alberta              | Fairview  |           752349 |  1536.35 |  -6207.12
+ Acosta                         | Ivan                 | Oak Grove |           654050 |  1090.65 | -14162.23
+ Acuna                          | Nellie               | Midway    |           510657 |  1691.18 | -16204.76
+ Adair                          | Emma                 | Midway    |           488495 |  3549.88 | -11303.04
+ Adair                          | Hilda                | Fairview  |           685421 |    11.05 |   4543.51
+ Adams                          | Aimee                | Oak Grove |           726450 |  2564.38 |  -2484.56
+ Adams                          | Andrew               | Fairview  |           171331 |   140.27 |   -886.41
+ Adams                          | Brenda               | Oak Grove |           113857 |   908.15 | -19956.25
+ Adams                          | Chris                | Oak Grove |           556529 |   845.03 | -11158.76
+ Adams                          | Clara                | Midway    |           626143 |     4.71 |  -1500.60
+ Adams                          | Daniel               | Oak Grove |           799103 |     0.00 |  -6767.00
+ Adams                          | Earl                 | Midway    |           822333 |     0.00 |  -5583.30
+ Adams                          | James                | Fairview  |           736337 |  1021.26 |  -5757.49
+ Adams                          | James                | Midway    |           675929 |  5359.40 | -20354.42
+ Adams                          | Jerry                | Oak Grove |           518861 |     1.08 |  -8906.69
+ Adams                          | Jerry                | Oak Grove |           518861 |          |   -951.75
+ Adams                          | Johnny               | Oak Grove |           584258 |   399.30 |  -6767.22
+ Adams                          | Juan                 | Fairview  |           673248 |  3929.89 | -19300.87
+ Adams                          | Latoria              | Midway    |           756019 |     0.00 |   1154.59
+ Adams                          | Lesley               | Oak Grove |           593923 |    49.11 | -11192.42
+ Adams                          | Myrna                | Oak Grove |           541137 |   160.98 |  -3488.99
+ Adams                          | Ronald               | Midway    |           865940 |  9185.50 |  -9976.85
+ Adams                          | Sara                 | Oak Grove |           768510 |   439.77 |  -4296.05
+ Adams                          | Steven               | Fairview  |           766221 |  4612.44 | -13350.63
+ Adams                          | Terry                | Midway    |           716654 |     0.00 |  -5304.89
+ Adams                          | Thaddeus             | Fairview  |           633520 |  1582.16 | -14752.83
+ Adams                          | Thaddeus             | Oak Grove |           809800 |  3632.34 | -13556.46
+ Adams                          | Tina                 | Fairview  |           382448 |  1500.95 |  -6491.00
+ Adams                          | Wesley               | Oak Grove |           225396 |  2508.38 | -17482.35
+ Addison                        | Anthony              | Midway    |            82440 |  1741.51 | -17820.92
+ Adkins                         | Cynthia              | Oak Grove |           675245 | 18106.85 | -18255.10
+ Adkins                         | David                | Midway    |            17166 |   153.92 |  -2358.86
+ Adkins                         | Joyce                | Oak Grove |           802522 |    68.73 |    274.93
+ Adkins                         | Sonya                | Fairview  |           734593 | 14419.43 | -18290.18
+ Aguilar                        | Roy                  | Fairview  |           651778 |  2272.43 | -11368.66
+ Aguilar                        | Veronica             | Oak Grove |           216300 |     0.00 |  -4119.10
+ Aguirre                        | Allen                | Midway    |           807557 |   621.18 |  -4088.87
+ Aguirre                        | Drew                 | Fairview  |           704606 |     0.00 |  -8833.16
+ Aguirre                        | Natalie              | Fairview  |           440192 |   288.83 |  -8848.11
+ Aguirre                        | Sergio               | Fairview  |           684191 |     0.00 | -11951.12
+ Ahmed                          | Lisa                 | Midway    |           692284 |  2342.73 | -11417.40
+ Akins                          | Virginia             | Fairview  |           895199 |  3995.62 |  -6790.55
+ Albert                         | Donald               | Fairview  |           929230 |   945.63 |  -3710.62
+ Albertson                      | Arianne              | Fairview  |           499817 |  1215.39 |  -6115.95
+ Albertson                      | Elvera               | Oak Grove |           234262 |  1116.09 |  -9981.02
+ Albrecht                       | Charles              | Fairview  |           711019 |   267.67 | -17533.82
+ Alderman                       | Ora                  | Oak Grove |           902604 |   779.52 |  -2272.03
+ Aldrich                        | Dennis               | Midway    |           194814 |   483.10 |  -3802.82
+ Aldridge                       | Daniel               | Oak Grove |           828686 |   654.78 |   1428.38
+ Alexander                      | Alicia               | Midway    |           303346 |   945.92 | -17061.51
+ Alexander                      | Amy                  | Fairview  |           446946 |  9824.64 | -17303.72
+ Alexander                      | Doris                | Fairview  |           823060 |  1900.41 |  -5362.18
+ Alexander                      | James                | Fairview  |           133117 |   297.08 |  -3680.35
+ Alexander                      | Joseph               | Fairview  |           725212 |    66.77 | -10421.85
+ Alexander                      | Kendrick             | Midway    |           366481 |   958.41 | -14685.70
+ Alexander                      | Mark                 | Midway    |           532995 |  1136.09 |   1048.46
+ Alexander                      | Micheal              | Fairview  |           905557 |  1159.81 |  -3078.42
+ Alexander                      | Mildred              | Oak Grove |            77130 |  1260.53 |   5910.65
+ Alexander                      | Monica               | Fairview  |           542404 |  2039.00 | -13068.72
+ Alexander                      | Rufus                | Midway    |           684483 |     0.00 | -11258.66
+ Alexander                      | Stephen              | Midway    |           146968 |  5353.59 |  -6146.12
+ Alexander                      | Tony                 | Midway    |           397872 |   297.98 | -15418.34
+ Alfaro                         | Franklin             | Oak Grove |           631732 |   256.17 | -13709.77
+ Alfaro                         | Pamela               | Oak Grove |           179317 |  1821.97 | -13723.35
+ Alger                          | Reina                | Midway    |           409822 |     0.00 |  -9308.23
+ Alicea                         | Eugene               | Oak Grove |           284763 |   491.94 |  -2380.64
+ Allen                          | Barbara              | Oak Grove |           575252 |  2147.68 | -14785.65
+ Allen                          | Carlos               | Fairview  |           924130 |  8301.88 |  -7671.43
+ Allen                          | Cathy                | Midway    |           718567 |  4772.61 | -14740.80
+ Allen                          | Christa              | Midway    |           932433 |   816.07 |  -7909.19
+ Allen                          | Clyde                | Fairview  |           635338 |  4078.28 | -11824.20
+ Allen                          | David                | Fairview  |           867085 |    49.68 |  -6964.27
+ Allen                          | David                | Fairview  |           867085 |          |  -1262.40
+ Allen                          | Dennis               | Fairview  |           132909 |  2074.56 | -10877.26
+ Allen                          | Dennis               | Midway    |           117372 |   214.56 |  -7675.24
+ Allen                          | Derek                | Midway    |           176565 |  4860.68 |  -8691.88
+ Allen                          | Derek                | Midway    |           176565 |     0.00 |          
+ Allen                          | Doug                 | Fairview  |           328675 |   185.50 |  -1566.11
+ Allen                          | Duane                | Midway    |           736988 |     0.00 |  -5244.85
+ Allen                          | Erlinda              | Midway    |           946576 |     0.00 |  -7354.57
+ Allen                          | James                | Fairview  |           735384 |  6659.66 | -11837.41
+ Allen                          | Justin               | Midway    |           102352 |  6843.82 | -18287.27
+ Allen                          | Kenneth              | Oak Grove |           793794 |  3116.75 | -12420.70
+ Allen                          | Luis                 | Fairview  |           549216 |   430.29 |  -4738.86
+(100 rows)
+
+Time: 4070,132 ms (00:04,070)

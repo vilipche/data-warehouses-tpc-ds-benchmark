@@ -1,0 +1,6 @@
+Timing is on.
+ s_store_name | sum 
+--------------+-----
+(0 rows)
+
+Time: 4627,857 ms (00:04,628)

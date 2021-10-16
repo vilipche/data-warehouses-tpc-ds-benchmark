@@ -1,0 +1,6 @@
+Timing is on.
+ c_customer_id 
+---------------
+(0 rows)
+
+Time: 27,706 ms

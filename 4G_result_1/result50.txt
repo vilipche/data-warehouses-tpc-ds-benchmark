@@ -1,0 +1,27 @@
+Timing is on.
+ s_store_name | s_company_id | s_street_number | s_street_name  |  s_street_type  | s_suite_number |  s_city   |     s_county      | s_state |   s_zip    | 30 days | 31-60 days | 61-90 days | 91-120 days | >120 days 
+--------------+--------------+-----------------+----------------+-----------------+----------------+-----------+-------------------+---------+------------+---------+------------+------------+-------------+-----------
+ able         |            1 | 228             | Cherry         | Avenue          | Suite G        | Fairview  | Williamson County | TN      | 35709      |     112 |         65 |         58 |          88 |       145
+ able         |            1 | 255             | Sycamore       | Dr.             | Suite 410      | Midway    | Williamson County | TN      | 31904      |      90 |         57 |         55 |          62 |       126
+ able         |            1 | 479             | Park First     | Lane            | Suite 20       | Oak Grove | Williamson County | TN      | 38370      |      91 |         72 |         71 |          62 |       118
+ anti         |            1 | 735             | Walnut         | Blvd            | Suite 360      | Midway    | Williamson County | TN      | 31904      |      83 |         76 |         75 |          58 |       120
+ ation        |            1 | 213             | 8th            | Road            | Suite 490      | Fairview  | Williamson County | TN      | 35709      |      88 |         68 |         65 |          57 |       138
+ ation        |            1 | 811             | Lee            | Circle          | Suite T        | Oak Grove | Williamson County | TN      | 38370      |      87 |         76 |         46 |          70 |       125
+ bar          |            1 | 175             | 4th            | Court           | Suite C        | Oak Grove | Williamson County | TN      | 38370      |      79 |         63 |         56 |          64 |       111
+ bar          |            1 | 200             | Lake           | RD              | Suite 320      | Fairview  | Williamson County | TN      | 35709      |      82 |         59 |         66 |          61 |       127
+ bar          |            1 | 818             | 1st Elm        | Road            | Suite 220      | Fairview  | Williamson County | TN      | 35709      |      74 |         59 |         89 |          71 |       116
+ cally        |            1 | 588             | View Mill      | Court           | Suite 160      | Fairview  | Williamson County | TN      | 35709      |      85 |         70 |         75 |          68 |       116
+ cally        |              | 688             |                | Avenue          | Suite 50       |           |                   | TN      |            |      75 |         57 |         59 |          71 |       130
+ eing         |            1 | 226             | 12th           | Lane            | Suite D        | Oak Grove | Williamson County | TN      | 38370      |      81 |         50 |         60 |          62 |       125
+ eing         |            1 | 293             | Center Main    | Lane            | Suite 200      | Fairview  | Williamson County | TN      | 35709      |      92 |         61 |         60 |          64 |       120
+ eing         |            1 | 317             | Poplar 9th     | Pkwy            | Suite P        | Midway    | Williamson County | TN      | 31904      |     100 |         64 |         59 |          43 |       120
+ ese          |            1 | 27              | Lake           | Ln              | Suite 260      | Fairview  | Williamson County | TN      | 35709      |      87 |         77 |         61 |          73 |       125
+ ese          |            1 | 313             | East           | Court           | Suite 300      | Midway    | Williamson County | TN      | 31904      |      95 |         57 |         61 |          60 |       111
+ ese          |            1 | 408             | Washington 1st | Circle          | Suite 390      | Oak Grove | Williamson County | TN      | 38370      |      79 |         72 |         64 |          62 |       127
+ n st         |            1 | 240             | Willow         | RD              | Suite 280      | Oak Grove | Williamson County | TN      | 38370      |      77 |         62 |         66 |          60 |       124
+ ought        |            1 | 75              | 2nd Oak        | Pkwy            | Suite C        | Oak Grove | Williamson County | TN      | 38370      |      94 |         51 |         62 |          54 |       119
+ ought        |            1 | 767             | Spring         | Wy              | Suite 250      | Fairview  | Williamson County | TN      | 35709      |      76 |         64 |         61 |          68 |       129
+ pri          |            1 | 84              | First          | Cir.            | Suite 180      | Fairview  | Williamson County | TN      | 35709      |      71 |         66 |         63 |          73 |       135
+(21 rows)
+
+Time: 2361,895 ms (00:02,362)

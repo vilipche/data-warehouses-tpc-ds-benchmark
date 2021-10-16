@@ -1,0 +1,67 @@
+Timing is on.
+ brand_id |                       brand                        | ext_price 
+----------+----------------------------------------------------+-----------
+  2002001 | importoimporto #1                                  |  99590.38
+  5003001 | exportischolar #1                                  |  84750.36
+  2001002 | amalgimporto #2                                    |  65631.68
+  2002002 | importoimporto #2                                  |  64076.37
+  7001010 | amalgbrand #10                                     |  56169.18
+  4001002 | amalgedu pack #2                                   |  54018.21
+ 10014011 | edu packamalgamalg #11                             |  53559.50
+  4004002 | edu packedu pack #2                                |  53274.14
+ 10009015 | maxiunivamalg #15                                  |  50699.81
+  7008008 | namelessbrand #8                                   |  49486.61
+  1004001 | edu packamalg #1                                   |  48773.25
+  9012005 | edu packscholar #2                                 |  47032.57
+  5002002 | importoscholar #2                                  |  44433.06
+  9013009 | exportiunivamalg #9                                |  44269.28
+  1003002 | exportiamalg #2                                    |  43503.55
+  8013007 | exportimaxi #7                                     |  43412.30
+  1001001 | amalgamalg #1                                      |  43054.43
+  7010003 | amalgnameless #4                                   |  42875.05
+  5001001 | amalgscholar #2                                    |  42687.44
+  3003002 | exportiexporti #2                                  |  41707.70
+  1004002 | edu packamalg #2                                   |  41018.47
+  6013007 | exportibrand #7                                    |  40087.50
+  7011001 | amalgnameless #1                                   |  39050.04
+  1002001 | importoamalg #1                                    |  38900.77
+  2002001 | edu packimporto #2                                 |  38669.50
+  9009003 | maximaxi #3                                        |  37324.07
+  3003001 | exportiexporti #1                                  |  35892.24
+  6001004 | amalgcorp #4                                       |  35307.57
+  9006008 | corpmaxi #8                                        |  35111.45
+  3004002 | edu packexporti #2                                 |  34581.26
+  1003001 | exportiamalg #1                                    |  33314.92
+  3002001 | importoexporti #1                                  |  31192.23
+  5001002 | amalgscholar #2                                    |  31065.21
+  9007003 | brandmaxi #3                                       |  30406.35
+  6014004 | edu packbrand #4                                   |  29871.28
+  5004001 | edu packscholar #1                                 |  28597.90
+  4002002 | importoedu pack #2                                 |  28147.41
+  6011003 | edu packnameless #6                                |  27684.65
+  8009010 | maxinameless #10                                   |  27473.77
+  3004001 | edu packexporti #1                                 |  25952.67
+  6003005 | exporticorp #5                                     |  25729.36
+  1001002 | amalgamalg #2                                      |  25306.17
+  9004012 | edu packmaxi #12                                   |  24297.39
+  8016003 | corpmaxi #3                                        |  22575.04
+ 10016017 | corpamalgamalg #17                                 |  22049.57
+  7016009 | brandmaxi #6                                       |  21968.00
+  2003001 | exportiimporto #1                                  |  21730.97
+  7010002 | univnameless #2                                    |  21221.02
+  6002005 | importoscholar #2                                  |  20858.73
+  4004001 | edu packedu pack #1                                |  20609.56
+ 10015003 | scholaramalgamalg #3                               |  20437.47
+ 10011014 | amalgimporto #2                                    |  19984.08
+  9002009 | importomaxi #9                                     |  19623.06
+ 10015010 | scholarbrand #10                                   |  18219.65
+  2001001 | edu packexporti #2                                 |  17532.13
+ 10013010 | exportiamalgamalg #10                              |  16479.79
+  8005002 | scholarnameless #2                                 |  16387.15
+  9006009 | corpmaxi #9                                        |  15558.78
+  6006006 | corpcorp #6                                        |  13738.85
+  4003002 | exportiedu pack #2                                 |  11449.54
+  7003003 | exportibrand #3                                    |   9539.80
+(61 rows)
+
+Time: 315,817 ms
