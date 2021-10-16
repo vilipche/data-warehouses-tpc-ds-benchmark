@@ -1,0 +1,106 @@
+Timing is on.
+ d_year | brand_id |                       brand                        | ext_price 
+--------+----------+----------------------------------------------------+-----------
+   2002 |  1002002 | importoamalg #2                                    | 161249.28
+   2002 |  1001002 | amalgamalg #2                                      | 147788.77
+   2002 |  1003002 | exportiamalg #2                                    | 129116.91
+   2002 |  2001002 | amalgimporto #2                                    | 123912.08
+   2002 |  5003001 | exportischolar #1                                  |  98056.49
+   2002 |  4004002 | edu packedu pack #2                                |  97317.73
+   2002 |  5003002 | exportischolar #2                                  |  95878.13
+   2002 |  1002001 | importoamalg #1                                    |  94143.10
+   2002 |  5001002 | amalgscholar #2                                    |  87576.04
+   2002 |  3003002 | exportiexporti #2                                  |  80133.73
+   2002 |  6008002 | namelesscorp #2                                    |  75369.19
+   2002 |  1004002 | edu packamalg #2                                   |  75349.10
+   2002 |  6010004 | univbrand #4                                       |  75348.05
+   2002 |  7004009 | edu packbrand #9                                   |  71659.02
+   2002 |  3002001 | importoexporti #1                                  |  63500.93
+   2002 |  1001001 | amalgamalg #1                                      |  62881.47
+   2002 |  3004002 | edu packexporti #2                                 |  62467.01
+   2002 |  2003002 | exportiimporto #2                                  |  60865.10
+   2002 |  3001002 | amalgexporti #2                                    |  59886.85
+   2002 |  2004002 | edu packimporto #2                                 |  59871.59
+   2002 |  4001001 | importoscholar #1                                  |  58703.31
+   2002 |  1004001 | edu packamalg #1                                   |  58231.25
+   2002 |  8016006 | corpmaxi #6                                        |  56433.41
+   2002 |  8004007 | edu packnameless #7                                |  54448.57
+   2002 |  4004001 | edu packedu pack #1                                |  54053.60
+   2002 |  2002001 | edu packexporti #1                                 |  53835.30
+   2002 |  4004001 | exportiamalg #2                                    |  53631.76
+   2002 |  5002002 | importoscholar #2                                  |  52644.38
+   2002 |  1003001 | exportiamalg #1                                    |  52134.10
+   2002 |  4003002 | exportiedu pack #2                                 |  51863.88
+   2002 |  6002005 | exportibrand #7                                    |  51402.46
+   2002 |  7015003 | edu packnameless #5                                |  50573.14
+   2002 |  8005003 | amalgscholar #1                                    |  50218.19
+   2002 |  4001002 | amalgedu pack #2                                   |  49335.28
+   2002 | 10013013 | exportiamalgamalg #13                              |  48756.42
+   2002 |  2002001 | edu packbrand #2                                   |  47349.92
+   2002 |  6014004 | edu packbrand #4                                   |  46996.41
+   2002 | 10008012 | namelessunivamalg #12                              |  46345.78
+   2002 | 10012001 | importoamalgamalg #1                               |  46207.78
+   2002 |  7003002 | exportibrand #2                                    |  43991.97
+   2002 |  5002001 | exportiimporto #2                                  |  43846.00
+   2002 |  6004006 | amalgimporto #1                                    |  43056.58
+   2002 |  7009010 | maxibrand #10                                      |  42985.73
+   2002 |  7007008 | importoimporto #1                                  |  42470.68
+   2002 |  1004002 | importoedu pack #1                                 |  42303.65
+   2002 |  2004001 | amalgamalg #2                                      |  41400.65
+   2002 |  4003001 | exportiedu pack #1                                 |  39575.28
+   2002 |  5003001 | edu packedu pack #1                                |  39348.58
+   2002 |  8006005 | corpnameless #5                                    |  38700.53
+   2002 |  3003001 | exportiexporti #1                                  |  38617.00
+   2002 |  2004001 | exportimaxi #7                                     |  38162.73
+   2002 |  5001001 | edu packedu pack #1                                |  37848.21
+   2002 |  1002001 | exportiunivamalg #10                               |  37801.96
+   2002 |  4004001 | amalgexporti #2                                    |  37622.51
+   2002 |  1003001 | corpunivamalg #8                                   |  37576.68
+   2002 |  7012010 | importonameless #10                                |  37493.65
+   2002 |  5002001 | exporticorp #2                                     |  37086.74
+   2002 |  5004002 | edu packscholar #2                                 |  36543.18
+   2002 |  6009005 | maxicorp #5                                        |  36258.66
+   2002 | 10004004 | edu packunivamalg #4                               |  36081.17
+   2002 |  2004001 | namelesscorp #5                                    |  34961.78
+   2002 |  6009001 | amalgamalg #2                                      |  34837.68
+   2002 |  8003010 | exportinameless #10                                |  34796.26
+   2002 |  9013007 | exportiunivamalg #7                                |  34441.54
+   2002 |  2004001 | edu packexporti #2                                 |  34244.98
+   2002 |  1004001 | importounivamalg #5                                |  33983.74
+   2002 |  6006004 | corpcorp #4                                        |  33865.73
+   2002 |  4002002 | importoedu pack #2                                 |  33812.92
+   2002 |  9016004 | corpunivamalg #4                                   |  33592.94
+   2002 |  7010004 | univnameless #4                                    |  33058.02
+   2002 |  7012005 | edu packedu pack #1                                |  33015.39
+   2002 |  3001001 | amalgexporti #1                                    |  32598.09
+   2002 |  5004001 | edu packscholar #1                                 |  32007.54
+   2002 |  5002001 | amalgimporto #2                                    |  31273.46
+   2002 |  1002002 | edu packscholar #1                                 |  31084.33
+   2002 |  6011006 | amalgamalg #1                                      |  31076.30
+   2002 | 10009008 | maxiunivamalg #8                                   |  30897.13
+   2002 |  4003001 | exportiexporti #2                                  |  30765.85
+   2002 |  9011006 | amalgimporto #1                                    |  29889.37
+   2002 | 10003016 | importoamalg #1                                    |  29836.86
+   2002 |  6010003 | univbrand #3                                       |  29698.50
+   2002 |  7014003 | edu packcorp #2                                    |  29559.34
+   2002 |  5002001 | importocorp #4                                     |  29425.75
+   2002 |  2004001 | edu packimporto #1                                 |  29357.09
+   2002 |  5004001 | exportibrand #9                                    |  29344.01
+   2002 |  7004001 | exportiamalg #2                                    |  29031.77
+   2002 |  5003001 | importoimporto #2                                  |  28797.88
+   2002 | 10014011 | edu packamalgamalg #11                             |  28703.99
+   2002 |  9008002 | namelessmaxi #2                                    |  28695.30
+   2002 |  6012005 | importobrand #5                                    |  28654.06
+   2002 | 10005003 | amalgscholar #2                                    |  28538.05
+   2002 |  8013007 | amalgedu pack #2                                   |  28503.16
+   2002 |  8008001 | amalgnameless #2                                   |  28407.54
+   2002 |  6011008 | amalgbrand #8                                      |  28354.57
+   2002 |  9005003 | edu packexporti #2                                 |  28161.93
+   2002 |  9012008 | importounivamalg #8                                |  27721.42
+   2002 |  8010004 | edu packimporto #1                                 |  27519.97
+   2002 | 10007012 | brandunivamalg #12                                 |  27187.02
+   2002 |  3004001 | edu packexporti #2                                 |  27184.17
+   2002 | 10016013 | corpamalgamalg #13                                 |  27058.44
+(100 rows)
+
+Time: 1633,499 ms (00:01,633)
