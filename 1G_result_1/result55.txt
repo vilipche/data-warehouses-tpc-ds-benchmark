@@ -1,0 +1,27 @@
+Timing is on.
+ brand_id |                       brand                        | ext_price 
+----------+----------------------------------------------------+-----------
+  2001002 | amalgimporto #2                                    |  47067.94
+  2002001 | edu packimporto #2                                 |  46322.75
+  2002002 | importoimporto #2                                  |  44980.60
+  6014004 | edu packbrand #4                                   |  34241.23
+  3004002 | edu packexporti #2                                 |  26376.92
+  5001002 | amalgscholar #2                                    |  23693.89
+  7011001 | amalgnameless #1                                   |  23460.14
+  1004001 | edu packamalg #1                                   |  21348.23
+  9012005 | edu packscholar #2                                 |  20087.46
+  7008008 | namelessbrand #8                                   |  19294.41
+ 10011014 | amalgimporto #2                                    |  18550.21
+  7016009 | brandmaxi #6                                       |  18520.31
+  4004001 | edu packedu pack #1                                |  16723.14
+  8016003 | corpmaxi #3                                        |  14877.47
+  1002001 | importoamalg #1                                    |  14493.06
+  6013007 | exportibrand #7                                    |  13894.78
+  1003002 | exportiamalg #2                                    |  11486.63
+  4001002 | amalgedu pack #2                                   |  11323.79
+  3003001 | exportiexporti #1                                  |  10239.65
+  5002002 | importoscholar #2                                  |   7553.67
+  9002009 | importomaxi #9                                     |   7349.91
+(21 rows)
+
+Time: 72,492 ms

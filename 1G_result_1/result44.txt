@@ -1,0 +1,6 @@
+Timing is on.
+ rnk | best_performing | worst_performing 
+-----+-----------------+------------------
+(0 rows)
+
+Time: 357,937 ms
