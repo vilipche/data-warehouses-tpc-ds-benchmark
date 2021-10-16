@@ -1,3 +1,0 @@
-ERROR:  column "i_category" does not exist
-LINE 33:   ,case when grouping(i_category)+grouping(i_class) = 0 then...
-                               ^
