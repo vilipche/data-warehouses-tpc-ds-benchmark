@@ -1,0 +1,106 @@
+Timing is on.
+ channel |    col_name     | d_year | d_qoy |                     i_category                     | sales_cnt | sales_amt 
+---------+-----------------+--------+-------+----------------------------------------------------+-----------+-----------
+ catalog | cs_warehouse_sk |   1998 |     1 | Books                                              |        39 |  50297.56
+ catalog | cs_warehouse_sk |   1998 |     1 | Children                                           |        30 |  62334.40
+ catalog | cs_warehouse_sk |   1998 |     1 | Electronics                                        |        49 |  60322.85
+ catalog | cs_warehouse_sk |   1998 |     1 | Home                                               |        47 |  51033.16
+ catalog | cs_warehouse_sk |   1998 |     1 | Jewelry                                            |        53 |  71472.84
+ catalog | cs_warehouse_sk |   1998 |     1 | Men                                                |        39 |  88380.37
+ catalog | cs_warehouse_sk |   1998 |     1 | Music                                              |        44 |  59984.71
+ catalog | cs_warehouse_sk |   1998 |     1 | Shoes                                              |        47 |  71872.20
+ catalog | cs_warehouse_sk |   1998 |     1 | Sports                                             |        45 |  47537.70
+ catalog | cs_warehouse_sk |   1998 |     1 | Women                                              |        52 |  63243.36
+ catalog | cs_warehouse_sk |   1998 |     2 | Books                                              |        35 |  71142.23
+ catalog | cs_warehouse_sk |   1998 |     2 | Children                                           |        39 |  46201.35
+ catalog | cs_warehouse_sk |   1998 |     2 | Electronics                                        |        50 |  40115.06
+ catalog | cs_warehouse_sk |   1998 |     2 | Home                                               |        39 |  63275.75
+ catalog | cs_warehouse_sk |   1998 |     2 | Jewelry                                            |        45 |  24871.05
+ catalog | cs_warehouse_sk |   1998 |     2 | Men                                                |        35 |  93457.12
+ catalog | cs_warehouse_sk |   1998 |     2 | Music                                              |        32 |  33622.62
+ catalog | cs_warehouse_sk |   1998 |     2 | Shoes                                              |        54 |  88854.40
+ catalog | cs_warehouse_sk |   1998 |     2 | Sports                                             |        40 |  72205.80
+ catalog | cs_warehouse_sk |   1998 |     2 | Women                                              |        39 |  34713.67
+ catalog | cs_warehouse_sk |   1998 |     2 |                                                    |         1 |    803.40
+ catalog | cs_warehouse_sk |   1998 |     3 | Books                                              |        68 |  87126.49
+ catalog | cs_warehouse_sk |   1998 |     3 | Children                                           |        70 | 162849.17
+ catalog | cs_warehouse_sk |   1998 |     3 | Electronics                                        |        84 |  93764.35
+ catalog | cs_warehouse_sk |   1998 |     3 | Home                                               |        88 |  88570.27
+ catalog | cs_warehouse_sk |   1998 |     3 | Jewelry                                            |        80 | 109036.91
+ catalog | cs_warehouse_sk |   1998 |     3 | Men                                                |        59 |  89327.97
+ catalog | cs_warehouse_sk |   1998 |     3 | Music                                              |        64 |  84909.90
+ catalog | cs_warehouse_sk |   1998 |     3 | Shoes                                              |        68 | 116984.50
+ catalog | cs_warehouse_sk |   1998 |     3 | Sports                                             |        83 | 118761.02
+ catalog | cs_warehouse_sk |   1998 |     3 | Women                                              |        73 | 115748.98
+ catalog | cs_warehouse_sk |   1998 |     3 |                                                    |         1 |  13828.80
+ catalog | cs_warehouse_sk |   1998 |     4 | Books                                              |       112 | 118400.61
+ catalog | cs_warehouse_sk |   1998 |     4 | Children                                           |       125 | 142808.11
+ catalog | cs_warehouse_sk |   1998 |     4 | Electronics                                        |       120 | 176988.08
+ catalog | cs_warehouse_sk |   1998 |     4 | Home                                               |       125 | 149574.41
+ catalog | cs_warehouse_sk |   1998 |     4 | Jewelry                                            |       144 | 172467.49
+ catalog | cs_warehouse_sk |   1998 |     4 | Men                                                |       125 | 189081.73
+ catalog | cs_warehouse_sk |   1998 |     4 | Music                                              |       133 | 164898.90
+ catalog | cs_warehouse_sk |   1998 |     4 | Shoes                                              |       114 | 128480.43
+ catalog | cs_warehouse_sk |   1998 |     4 | Sports                                             |       115 | 153144.46
+ catalog | cs_warehouse_sk |   1998 |     4 | Women                                              |       121 | 145736.22
+ catalog | cs_warehouse_sk |   1998 |     4 |                                                    |         7 |  15536.52
+ catalog | cs_warehouse_sk |   1999 |     1 | Books                                              |        43 |  83326.90
+ catalog | cs_warehouse_sk |   1999 |     1 | Children                                           |        52 |  38068.75
+ catalog | cs_warehouse_sk |   1999 |     1 | Electronics                                        |        45 |  58391.69
+ catalog | cs_warehouse_sk |   1999 |     1 | Home                                               |        36 |  37938.03
+ catalog | cs_warehouse_sk |   1999 |     1 | Jewelry                                            |        45 |  32937.55
+ catalog | cs_warehouse_sk |   1999 |     1 | Men                                                |        41 |  45226.10
+ catalog | cs_warehouse_sk |   1999 |     1 | Music                                              |        43 |  63893.47
+ catalog | cs_warehouse_sk |   1999 |     1 | Shoes                                              |        51 |  49737.93
+ catalog | cs_warehouse_sk |   1999 |     1 | Sports                                             |        41 |  48445.23
+ catalog | cs_warehouse_sk |   1999 |     1 | Women                                              |        33 |  31999.72
+ catalog | cs_warehouse_sk |   1999 |     1 |                                                    |         2 |   2629.43
+ catalog | cs_warehouse_sk |   1999 |     2 | Books                                              |        34 |  62638.10
+ catalog | cs_warehouse_sk |   1999 |     2 | Children                                           |        45 |  33586.06
+ catalog | cs_warehouse_sk |   1999 |     2 | Electronics                                        |        27 |  30551.81
+ catalog | cs_warehouse_sk |   1999 |     2 | Home                                               |        50 |  58263.85
+ catalog | cs_warehouse_sk |   1999 |     2 | Jewelry                                            |        45 |  53453.85
+ catalog | cs_warehouse_sk |   1999 |     2 | Men                                                |        46 |  66660.14
+ catalog | cs_warehouse_sk |   1999 |     2 | Music                                              |        44 |  46928.07
+ catalog | cs_warehouse_sk |   1999 |     2 | Shoes                                              |        44 |  42375.98
+ catalog | cs_warehouse_sk |   1999 |     2 | Sports                                             |        48 |  33028.42
+ catalog | cs_warehouse_sk |   1999 |     2 | Women                                              |        28 |  29873.20
+ catalog | cs_warehouse_sk |   1999 |     2 |                                                    |         1 |          
+ catalog | cs_warehouse_sk |   1999 |     3 | Books                                              |        84 | 118935.25
+ catalog | cs_warehouse_sk |   1999 |     3 | Children                                           |        87 | 108825.95
+ catalog | cs_warehouse_sk |   1999 |     3 | Electronics                                        |        79 |  92998.27
+ catalog | cs_warehouse_sk |   1999 |     3 | Home                                               |        71 | 130451.25
+ catalog | cs_warehouse_sk |   1999 |     3 | Jewelry                                            |        82 |  75133.04
+ catalog | cs_warehouse_sk |   1999 |     3 | Men                                                |        76 |  95440.70
+ catalog | cs_warehouse_sk |   1999 |     3 | Music                                              |        90 | 100751.91
+ catalog | cs_warehouse_sk |   1999 |     3 | Shoes                                              |        94 | 142163.33
+ catalog | cs_warehouse_sk |   1999 |     3 | Sports                                             |        85 |  69746.35
+ catalog | cs_warehouse_sk |   1999 |     3 | Women                                              |        72 | 100844.50
+ catalog | cs_warehouse_sk |   1999 |     3 |                                                    |         3 |          
+ catalog | cs_warehouse_sk |   1999 |     4 | Books                                              |       123 | 156591.97
+ catalog | cs_warehouse_sk |   1999 |     4 | Children                                           |       116 | 136075.96
+ catalog | cs_warehouse_sk |   1999 |     4 | Electronics                                        |       128 | 239971.69
+ catalog | cs_warehouse_sk |   1999 |     4 | Home                                               |       120 | 174907.30
+ catalog | cs_warehouse_sk |   1999 |     4 | Jewelry                                            |       125 | 179080.54
+ catalog | cs_warehouse_sk |   1999 |     4 | Men                                                |       120 | 173292.13
+ catalog | cs_warehouse_sk |   1999 |     4 | Music                                              |       136 | 176907.44
+ catalog | cs_warehouse_sk |   1999 |     4 | Shoes                                              |       140 | 135973.10
+ catalog | cs_warehouse_sk |   1999 |     4 | Sports                                             |       123 | 180080.76
+ catalog | cs_warehouse_sk |   1999 |     4 | Women                                              |       126 | 188153.70
+ catalog | cs_warehouse_sk |   1999 |     4 |                                                    |         3 |    164.50
+ catalog | cs_warehouse_sk |   2000 |     1 | Books                                              |        41 |  81447.63
+ catalog | cs_warehouse_sk |   2000 |     1 | Children                                           |        26 |  20755.61
+ catalog | cs_warehouse_sk |   2000 |     1 | Electronics                                        |        45 |  38512.74
+ catalog | cs_warehouse_sk |   2000 |     1 | Home                                               |        43 |  39251.57
+ catalog | cs_warehouse_sk |   2000 |     1 | Jewelry                                            |        41 |  49528.32
+ catalog | cs_warehouse_sk |   2000 |     1 | Men                                                |        41 |  45726.09
+ catalog | cs_warehouse_sk |   2000 |     1 | Music                                              |        48 |  91865.30
+ catalog | cs_warehouse_sk |   2000 |     1 | Shoes                                              |        37 |  53294.21
+ catalog | cs_warehouse_sk |   2000 |     1 | Sports                                             |        35 |  13277.37
+ catalog | cs_warehouse_sk |   2000 |     1 | Women                                              |        52 | 111366.33
+ catalog | cs_warehouse_sk |   2000 |     2 | Books                                              |        41 |  49149.82
+ catalog | cs_warehouse_sk |   2000 |     2 | Children                                           |        38 |  35449.97
+ catalog | cs_warehouse_sk |   2000 |     2 | Electronics                                        |        41 |  15108.57
+(100 rows)
+
+Time: 9801,660 ms (00:09,802)

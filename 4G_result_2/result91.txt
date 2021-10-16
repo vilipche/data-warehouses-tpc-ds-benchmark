@@ -1,0 +1,18 @@
+Timing is on.
+   call_center    | call_center_name  |    manager     | returns_loss 
+------------------+-------------------+----------------+--------------
+ AAAAAAAABAAAAAAA | NY Metro          | Bob Belcher    |      3614.20
+ AAAAAAAACAAAAAAA | Mid Atlantic      | Mark Hightower |      2921.96
+ AAAAAAAAEAAAAAAA | North Midwest     | Larry Mccray   |      2458.18
+ AAAAAAAACAAAAAAA | Mid Atlantic      | Mark Hightower |      1026.40
+ AAAAAAAAHAAAAAAA | Pacific Northwest | Alden Snyder   |       912.95
+ AAAAAAAAIAAAAAAA | California        | Wayne Ray      |       828.90
+ AAAAAAAAEAAAAAAA | North Midwest     | Larry Mccray   |       572.62
+ AAAAAAAAKAAAAAAA | Hawaii/Alaska     | Gregory Altman |       493.11
+ AAAAAAAAIAAAAAAA | California        | Wayne Ray      |       455.75
+ AAAAAAAAKAAAAAAA | Hawaii/Alaska     | Gregory Altman |       290.56
+ AAAAAAAAHAAAAAAA | Pacific Northwest | Alden Snyder   |       245.98
+ AAAAAAAABAAAAAAA | NY Metro          | Bob Belcher    |       221.73
+(12 rows)
+
+Time: 208,377 ms

@@ -1,0 +1,2 @@
+Timing is on.
+Time: 6449,712 ms (00:06,450)
