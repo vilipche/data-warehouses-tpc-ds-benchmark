@@ -1,0 +1,7 @@
+Timing is on.
+ promotions | total | ?column? 
+------------+-------+----------
+            |       |         
+(1 row)
+
+Time: 23,931 ms

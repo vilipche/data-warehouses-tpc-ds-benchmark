@@ -1,0 +1,12 @@
+Timing is on.
+ sum 
+-----
+    
+(1 row)
+
+Time: 23255,796 ms (00:23,256)
+ c_last_name | c_first_name | sales 
+-------------+--------------+-------
+(0 rows)
+
+Time: 22543,030 ms (00:22,543)
