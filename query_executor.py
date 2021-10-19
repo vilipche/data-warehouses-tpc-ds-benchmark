@@ -29,7 +29,7 @@ def decorate_query_for_statistics(query):
 
 
 def parse_times_from_query_result(query_result):
-    planning_time_str = query_result[-1][0]
+    planning_time_str = query_result[-2][0]
     planning_time_str = planning_time_str.strip("Planning time: ").strip(" ms")
     planning_time = float(planning_time_str)
 
