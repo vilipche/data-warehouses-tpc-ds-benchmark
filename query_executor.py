@@ -1,5 +1,6 @@
 import psycopg2
 import csv
+from os.path import join
 
 
 def open_postgresql_connection(db_params):
@@ -27,16 +28,24 @@ def decorate_query_for_statistics(query):
     return "EXPLAIN ANALYZE " + query
 
 
-def parse_execution_time_from_query_result(query_result):
+def parse_times_from_query_result(query_result):
+    planning_time_str = query_result[-1][0]
+    planning_time_str = planning_time_str.strip("Planning time: ").strip(" ms")
+    planning_time = float(planning_time_str)
+
     execution_time_str = query_result[-1][0]
     execution_time_str = execution_time_str.strip("Execution Time: ").strip(" ms")
-    return float(execution_time_str)
+    execution_time = float(execution_time_str)
+
+    overall_time = planning_time + execution_time
+
+    return planning_time, execution_time, overall_time
 
 
-def write_execution_times(file_path, execution_times):
+def write_execution_times(file_path, times_list):
     with open(file_path, 'a+') as file:
         writer = csv.writer(file)
-        writer.writerow(execution_times)
+        writer.writerow(times_list)
 
 
 if __name__ == '__main__':
@@ -44,14 +53,18 @@ if __name__ == '__main__':
     DB_PARAMS = {
         "host": "localhost",
         "database": "database",
-        "user": "username",
+        "user": "username", #TODO don't commit
         "password": "password",
         "port": "5432"
     }
 
-    QUERIES_FILE_PATH = "query_0.sql"           # TODO set this path to the file containing the queries
+    SCALE_FACTOR = 1                            # TODO set this scale factor to 1, 2, 4 or 8
+    QUERY_DIRECTORY = f"queries/queries_{SCALE_FACTOR}"
+    QUERIES_FILE_PATH = join(QUERY_DIRECTORY, "queries.sql")
     QUERY_NR_OF_EXECUTIONS = 6                  # TODO set this value to the number of times each query will be executed
-    TIMES_FILE_PATH = "execution_times.csv"
+    PLN_TIME_CSV_PATH = join(QUERY_DIRECTORY, "planning_times.csv")
+    EXC_TIME_CSV_PATH = join(QUERY_DIRECTORY, "execution_times.csv")
+    OVR_TIME_CSV_PATH = join(QUERY_DIRECTORY, "overall_times.csv")
 
     queries = parse_queries_from(QUERIES_FILE_PATH)
 
@@ -60,14 +73,20 @@ if __name__ == '__main__':
 
     for query in queries:
         query = decorate_query_for_statistics(query)
+        planning_times = list()
         execution_times = list()
+        overall_times = list()
 
         for _ in range(QUERY_NR_OF_EXECUTIONS):
             cursor.execute(query)
-            execution_time = parse_execution_time_from_query_result(cursor.fetchall())
+            planning_time, execution_time, overall_time = parse_times_from_query_result(cursor.fetchall())
+            planning_times.append(planning_time)
             execution_times.append(execution_time)
+            overall_times.append(overall_time)
 
-        write_execution_times(TIMES_FILE_PATH, execution_times)
+        write_execution_times(PLN_TIME_CSV_PATH, planning_times)
+        write_execution_times(EXC_TIME_CSV_PATH, execution_times)
+        write_execution_times(OVR_TIME_CSV_PATH, overall_times)
 
     cursor.close()
     connection.close()
