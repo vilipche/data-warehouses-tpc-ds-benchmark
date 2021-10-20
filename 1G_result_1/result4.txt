@@ -1,2 +1,0 @@
-Timing is on.
-Time: 44838,396 ms (00:44,838)

@@ -1,7 +1,0 @@
-Timing is on.
- count 
--------
-   800
-(1 row)
-
-Time: 583,994 ms

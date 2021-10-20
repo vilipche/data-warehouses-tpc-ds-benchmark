@@ -1,8 +1,0 @@
-Timing is on.
-                    product_name                    | store_name | store_zip  | b_street_number | b_street_name |   b_city    |   b_zip    | c_street_number | c_street_name |   c_city   |   c_zip    | syear | cnt |  s11  |  s21  | s31  |  s12  |  s22  | s32  | syear | cnt 
-----------------------------------------------------+------------+------------+-----------------+---------------+-------------+------------+-----------------+---------------+------------+------------+-------+-----+-------+-------+------+-------+-------+------+-------+-----
- priableoughtcally                                  | bar        | 31904      | 7               | Park 1st      | Valley View | 55124      | 389             | 14th First    | Pine Grove | 44593      |  2001 |   1 | 19.05 | 23.24 | 0.00 | 58.23 | 64.63 | 0.00 |  2002 |   1
- priableoughtcally                                  | eing       | 35709      | 972             | Mill 1st      | Newport     | 41521      | 930             | 5th           | Enterprise | 71757      |  2001 |   1 | 33.04 | 65.74 | 0.00 | 70.28 | 94.17 | 0.00 |  2002 |   1
-(2 rows)
-
-Time: 1706,794 ms (00:01,707)
