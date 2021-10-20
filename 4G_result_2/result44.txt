@@ -1,6 +1,0 @@
-Timing is on.
- rnk | best_performing | worst_performing 
------+-----------------+------------------
-(0 rows)
-
-Time: 1392,674 ms (00:01,393)

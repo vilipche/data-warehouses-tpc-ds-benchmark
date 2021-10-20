@@ -1,6 +1,0 @@
-Timing is on.
- s_store_name | sum 
---------------+-----
-(0 rows)
-
-Time: 4729,411 ms (00:04,729)

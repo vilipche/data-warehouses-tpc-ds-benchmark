@@ -1,7 +1,0 @@
-Timing is on.
- excess discount amount 
-------------------------
-              579112.02
-(1 row)
-
-Time: 1720,062 ms (00:01,720)
