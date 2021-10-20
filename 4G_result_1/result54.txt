@@ -1,6 +1,0 @@
-Timing is on.
- segment | num_customers | segment_base 
----------+---------------+--------------
-(0 rows)
-
-Time: 24330,037 ms (00:24,330)
