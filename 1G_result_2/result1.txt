@@ -1,6 +1,0 @@
-Timing is on.
- c_customer_id 
----------------
-(0 rows)
-
-Time: 1,540 ms

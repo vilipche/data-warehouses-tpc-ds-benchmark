@@ -1,7 +1,0 @@
-Timing is on.
- store_only | catalog_only | store_and_catalog 
-------------+--------------+-------------------
-     535924 |       285939 |               145
-(1 row)
-
-Time: 7216,443 ms (00:07,216)

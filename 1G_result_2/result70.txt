@@ -1,9 +1,0 @@
-Timing is on.
-   total_sum   | s_state |     s_county      | lochierarchy | rank_within_parent 
----------------+---------+-------------------+--------------+--------------------
- -439782716.47 |         |                   |            2 |                  1
- -439782716.47 | TN      |                   |            1 |                  1
- -439782716.47 | TN      | Williamson County |            0 |                  1
-(3 rows)
-
-Time: 3280,210 ms (00:03,280)
