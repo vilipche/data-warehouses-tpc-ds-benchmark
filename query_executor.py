@@ -30,11 +30,11 @@ def decorate_query_for_statistics(query):
 
 def parse_times_from_query_result(query_result):
     planning_time_str = query_result[-2][0]
-    planning_time_str = planning_time_str.strip("Planning time: ").strip(" ms")
+    planning_time_str = planning_time_str.strip("Planning Time: ").strip(" ms")
     planning_time = float(planning_time_str)
 
     execution_time_str = query_result[-1][0]
-    execution_time_str = execution_time_str.strip("Execution time: ").strip(" ms")
+    execution_time_str = execution_time_str.strip("Execution Time: ").strip(" ms")
     execution_time = float(execution_time_str)
 
     overall_time = planning_time + execution_time
