@@ -39,8 +39,8 @@ sudo -u postgres psql tpcds -c "\\copy $table FROM '/tmp/$i' CSV DELIMITER '|'";
 
 
 # in case customer does not load try this:
-sudo -u postgres psql tpcds -c "SET CLIENT_ENCODING TO 'latin1;'"
-sudo -u postgres psql tpcds -c "\\copy customer FROM '/tmp/customer.dat' CSV DELIMITER '|'";
+#sudo -u postgres psql tpcds -c "SET CLIENT_ENCODING TO 'latin1;'"
+#sudo -u postgres psql tpcds -c "\\copy customer FROM '/tmp/customer.dat' CSV DELIMITER '|'";
 # in case this still doesn't work open the databse from terminal and add both commands
 
 # run the queries
