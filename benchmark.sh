@@ -25,6 +25,7 @@ echo "Generating $2 GB of data"
 # # # create the database
 sudo -u postgres psql -c "create database tpcds"
 sudo -u postgres psql tpcds -f 'tpcds.sql'
+sudo -u postgres psql tpcds -f 'tpcds_ri.sql'
 sudo -u postgres psql tpcds -c "SET CLIENT_ENCODING TO 'latin1'" #bugs
 
 
