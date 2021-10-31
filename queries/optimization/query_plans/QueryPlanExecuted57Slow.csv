@@ -1,0 +1,58 @@
+                                                                                                           QUERY PLAN                                                                                                           
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Limit  (cost=58160.37..58160.37 rows=1 width=368) (actual time=273846.485..273846.601 rows=100 loops=1)
+   CTE v1
+     ->  WindowAgg  (cost=50337.00..51862.86 rows=8326 width=300) (actual time=798.496..1198.862 rows=32775 loops=1)
+           ->  WindowAgg  (cost=50337.00..51654.71 rows=8326 width=292) (actual time=798.493..1161.884 rows=32775 loops=1)
+                 ->  Finalize GroupAggregate  (cost=50337.00..51467.37 rows=8326 width=260) (actual time=798.471..1118.310 rows=32775 loops=1)
+                       Group Key: item.i_category, item.i_brand, call_center.cc_name, date_dim.d_year, date_dim.d_moy
+                       ->  Gather Merge  (cost=50337.00..51241.88 rows=6938 width=260) (actual time=798.445..1041.606 rows=74363 loops=1)
+                             Workers Planned: 2
+                             Workers Launched: 2
+                             ->  Partial GroupAggregate  (cost=49336.97..49441.04 rows=3469 width=260) (actual time=786.407..959.292 rows=24788 loops=3)
+                                   Group Key: item.i_category, item.i_brand, call_center.cc_name, date_dim.d_year, date_dim.d_moy
+                                   ->  Sort  (cost=49336.97..49345.64 rows=3469 width=234) (actual time=786.381..880.968 rows=116022 loops=3)
+                                         Sort Key: item.i_category, item.i_brand, call_center.cc_name, date_dim.d_year, date_dim.d_moy
+                                         Sort Method: external merge  Disk: 15856kB
+                                         ->  Nested Loop  (cost=3065.11..49132.99 rows=3469 width=234) (actual time=25.132..387.567 rows=116022 loops=3)
+                                               ->  Hash Join  (cost=3064.83..48062.60 rows=3469 width=136) (actual time=25.102..161.737 rows=116022 loops=3)
+                                                     Hash Cond: (catalog_sales.cs_call_center_sk = call_center.cc_call_center_sk)
+                                                     ->  Hash Join  (cost=3053.93..48041.59 rows=3485 width=22) (actual time=25.063..140.163 rows=116297 loops=3)
+                                                           Hash Cond: (catalog_sales.cs_sold_date_sk = date_dim.d_date_sk)
+                                                           ->  Parallel Seq Scan on catalog_sales  (cost=0.00..43411.00 rows=600600 width=18) (actual time=0.023..61.055 rows=480516 loops=3)
+                                                           ->  Hash  (cost=3048.60..3048.60 rows=426 width=12) (actual time=14.955..14.955 rows=427 loops=3)
+                                                                 Buckets: 1024  Batches: 1  Memory Usage: 27kB
+                                                                 ->  Seq Scan on date_dim  (cost=0.00..3048.60 rows=426 width=12) (actual time=7.500..14.873 rows=427 loops=3)
+                                                                       Filter: ((d_year = 1999) OR ((d_year = 1998) AND (d_moy = 12)) OR ((d_year = 2000) AND (d_moy = 1)))
+                                                                       Rows Removed by Filter: 72622
+                                                     ->  Hash  (cost=10.40..10.40 rows=40 width=122) (actual time=0.016..0.016 rows=6 loops=3)
+                                                           Buckets: 1024  Batches: 1  Memory Usage: 9kB
+                                                           ->  Seq Scan on call_center  (cost=0.00..10.40 rows=40 width=122) (actual time=0.009..0.011 rows=6 loops=3)
+                                               ->  Index Scan using item_pkey on item  (cost=0.29..0.31 rows=1 width=106) (actual time=0.002..0.002 rows=1 loops=348067)
+                                                     Index Cond: (i_item_sk = catalog_sales.cs_item_sk)
+   CTE v2
+     ->  Nested Loop  (cost=5631.37..6297.46 rows=1 width=336) (actual time=1631.943..273664.305 rows=27021 loops=1)
+           Join Filter: ((v1_lag.i_category = v1.i_category) AND (v1_lag.i_brand = v1.i_brand) AND ((v1_lag.cc_name)::text = (v1.cc_name)::text) AND ((v1_lag.rn + 1) = v1.rn))
+           Rows Removed by Join Filter: 885586254
+           ->  Merge Join  (cost=5631.37..5943.60 rows=1 width=1132) (actual time=1631.931..1806.076 rows=27021 loops=1)
+                 Merge Cond: ((v1_lag.i_category = v1_lead.i_category) AND (v1_lag.i_brand = v1_lead.i_brand) AND ((v1_lag.cc_name)::text = (v1_lead.cc_name)::text) AND (((v1_lag.rn + 1)) = ((v1_lead.rn - 1))))
+                 ->  Sort  (cost=2815.68..2836.50 rows=8326 width=566) (actual time=1432.644..1447.499 rows=32344 loops=1)
+                       Sort Key: v1_lag.i_category, v1_lag.i_brand, v1_lag.cc_name, ((v1_lag.rn + 1))
+                       Sort Method: external sort  Disk: 4824kB
+                       ->  CTE Scan on v1 v1_lag  (cost=0.00..166.52 rows=8326 width=566) (actual time=798.499..1229.120 rows=32775 loops=1)
+                 ->  Materialize  (cost=2815.68..2857.31 rows=8326 width=566) (actual time=199.274..249.114 rows=32368 loops=1)
+                       ->  Sort  (cost=2815.68..2836.50 rows=8326 width=566) (actual time=199.270..232.679 rows=32368 loops=1)
+                             Sort Key: v1_lead.i_category, v1_lead.i_brand, v1_lead.cc_name, ((v1_lead.rn - 1))
+                             Sort Method: external sort  Disk: 4824kB
+                             ->  CTE Scan on v1 v1_lead  (cost=0.00..166.52 rows=8326 width=566) (actual time=0.011..8.648 rows=32775 loops=1)
+           ->  CTE Scan on v1  (cost=0.00..166.52 rows=8326 width=602) (actual time=0.002..4.020 rows=32775 loops=27021)
+   ->  Sort  (cost=0.05..0.06 rows=1 width=368) (actual time=273846.484..273846.493 rows=100 loops=1)
+         Sort Key: ((v2.sum_sales - v2.avg_monthly_sales)), v2.nsum
+         Sort Method: top-N heapsort  Memory: 49kB
+         ->  CTE Scan on v2  (cost=0.00..0.04 rows=1 width=368) (actual time=1631.953..273805.256 rows=24615 loops=1)
+               Filter: ((avg_monthly_sales > '0'::numeric) AND (d_year = 1999) AND (CASE WHEN (avg_monthly_sales > '0'::numeric) THEN (abs((sum_sales - avg_monthly_sales)) / avg_monthly_sales) ELSE NULL::numeric END > 0.1))
+               Rows Removed by Filter: 2406
+ Planning time: 1.451 ms
+ Execution time: 273850.110 ms
+(54 rows)
+

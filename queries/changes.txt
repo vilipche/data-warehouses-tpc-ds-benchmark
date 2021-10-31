@@ -21,7 +21,7 @@ Add alias to subquery -> AS temp:
     23
     49
 
-Change lochierachy -> grouping(i_category)+grouping(i_class) in ORDER BY CASE clause
+Change lochierarchy -> grouping(i_category)+grouping(i_class) in ORDER BY CASE clause
     36
     70
     86

@@ -1,0 +1,133 @@
+Limit  (cost=2926100.97..2926114.85 rows=100 width=334) (actual time=55370.267..55424.175 rows=4 loops=1)
+  CTE year_catalog_sales
+    ->  Finalize GroupAggregate  (cost=247346.68..462584.36 rows=1441526 width=255) (actual time=2025.649..2905.554 rows=136978 loops=1)
+"          Group Key: customer.c_customer_id, customer.c_first_name, customer.c_last_name, customer.c_preferred_cust_flag, customer.c_birth_country, customer.c_login, customer.c_email_address, date_dim.d_year"
+          ->  Gather Merge  (cost=247346.68..414533.48 rows=1201272 width=223) (actual time=2025.630..2791.837 rows=143743 loops=1)
+                Workers Planned: 2
+                Workers Launched: 2
+                ->  Partial GroupAggregate  (cost=246346.65..274876.86 rows=600636 width=223) (actual time=1994.235..2632.195 rows=47914 loops=3)
+"                      Group Key: customer.c_customer_id, customer.c_first_name, customer.c_last_name, customer.c_preferred_cust_flag, customer.c_birth_country, customer.c_login, customer.c_email_address, date_dim.d_year"
+                      ->  Sort  (cost=246346.65..247848.24 rows=600636 width=216) (actual time=1994.176..2305.445 rows=476980 loops=3)
+"                            Sort Key: customer.c_customer_id, customer.c_first_name, customer.c_last_name, customer.c_preferred_cust_flag, customer.c_birth_country, customer.c_login, customer.c_email_address, date_dim.d_year"
+                            Sort Method: external merge  Disk: 84384kB
+                            Worker 0:  Sort Method: external merge  Disk: 83672kB
+                            Worker 1:  Sort Method: external merge  Disk: 83008kB
+                            ->  Parallel Hash Join  (cost=8015.36..65518.21 rows=600636 width=216) (actual time=565.491..740.553 rows=476980 loops=3)
+                                  Hash Cond: (catalog_sales.cs_sold_date_sk = date_dim.d_date_sk)
+                                  ->  Parallel Hash Join  (cost=5643.54..61569.63 rows=600636 width=216) (actual time=558.392..679.310 rows=478173 loops=3)
+                                        Hash Cond: (catalog_sales.cs_bill_customer_sk = customer.c_customer_sk)
+                                        ->  Parallel Seq Scan on catalog_sales  (cost=0.00..43411.36 rows=600636 width=33) (actual time=0.047..95.464 rows=480516 loops=3)
+                                        ->  Parallel Hash  (cost=3356.24..3356.24 rows=58824 width=191) (actual time=374.544..374.549 rows=33333 loops=3)
+                                              Buckets: 32768  Batches: 8  Memory Usage: 2400kB
+                                              ->  Parallel Seq Scan on customer  (cost=0.00..3356.24 rows=58824 width=191) (actual time=243.968..250.110 rows=33333 loops=3)
+                                  ->  Parallel Hash  (cost=1834.70..1834.70 rows=42970 width=8) (actual time=6.868..6.869 rows=24350 loops=3)
+                                        Buckets: 131072  Batches: 1  Memory Usage: 3904kB
+                                        ->  Parallel Seq Scan on date_dim  (cost=0.00..1834.70 rows=42970 width=8) (actual time=0.012..6.307 rows=73049 loops=1)
+  CTE year_web_sales
+    ->  Finalize GroupAggregate  (cost=127330.22..234743.02 rows=719384 width=255) (actual time=1171.304..1609.587 rows=56649 loops=1)
+"          Group Key: customer_1.c_customer_id, customer_1.c_first_name, customer_1.c_last_name, customer_1.c_preferred_cust_flag, customer_1.c_birth_country, customer_1.c_login, customer_1.c_email_address, date_dim_1.d_year"
+          ->  Gather Merge  (cost=127330.22..210763.57 rows=599486 width=223) (actual time=1171.253..1559.232 rows=59718 loops=1)
+                Workers Planned: 2
+                Workers Launched: 2
+                ->  Partial GroupAggregate  (cost=126330.19..140567.99 rows=299743 width=223) (actual time=1143.933..1476.628 rows=19906 loops=3)
+"                      Group Key: customer_1.c_customer_id, customer_1.c_first_name, customer_1.c_last_name, customer_1.c_preferred_cust_flag, customer_1.c_birth_country, customer_1.c_login, customer_1.c_email_address, date_dim_1.d_year"
+                      ->  Sort  (cost=126330.19..127079.55 rows=299743 width=216) (actual time=1143.861..1304.691 rows=239706 loops=3)
+"                            Sort Key: customer_1.c_customer_id, customer_1.c_first_name, customer_1.c_last_name, customer_1.c_preferred_cust_flag, customer_1.c_birth_country, customer_1.c_login, customer_1.c_email_address, date_dim_1.d_year"
+                            Sort Method: external merge  Disk: 43032kB
+                            Worker 0:  Sort Method: external merge  Disk: 41648kB
+                            Worker 1:  Sort Method: external merge  Disk: 41608kB
+                            ->  Parallel Hash Join  (cost=8015.36..37589.52 rows=299743 width=216) (actual time=520.416..616.262 rows=239706 loops=3)
+                                  Hash Cond: (web_sales.ws_sold_date_sk = date_dim_1.d_date_sk)
+                                  ->  Parallel Hash Join  (cost=5643.54..34430.83 rows=299743 width=216) (actual time=511.723..574.610 rows=239739 loops=3)
+                                        Hash Cond: (web_sales.ws_bill_customer_sk = customer_1.c_customer_sk)
+                                        ->  Parallel Seq Scan on web_sales  (cost=0.00..21764.43 rows=299743 width=33) (actual time=0.044..50.781 rows=239795 loops=3)
+                                        ->  Parallel Hash  (cost=3356.24..3356.24 rows=58824 width=191) (actual time=417.125..417.127 rows=33333 loops=3)
+                                              Buckets: 32768  Batches: 8  Memory Usage: 2400kB
+                                              ->  Parallel Seq Scan on customer customer_1  (cost=0.00..3356.24 rows=58824 width=191) (actual time=275.716..282.149 rows=33333 loops=3)
+                                  ->  Parallel Hash  (cost=1834.70..1834.70 rows=42970 width=8) (actual time=8.469..8.470 rows=24350 loops=3)
+                                        Buckets: 131072  Batches: 1  Memory Usage: 3904kB
+                                        ->  Parallel Seq Scan on date_dim date_dim_1  (cost=0.00..1834.70 rows=42970 width=8) (actual time=0.021..8.128 rows=73049 loops=1)
+  CTE year_store_sales
+    ->  Finalize GroupAggregate  (cost=464307.98..894402.06 rows=2880499 width=255) (actual time=3846.789..5471.048 rows=190581 loops=1)
+"          Group Key: customer_2.c_customer_id, customer_2.c_first_name, customer_2.c_last_name, customer_2.c_preferred_cust_flag, customer_2.c_birth_country, customer_2.c_login, customer_2.c_email_address, date_dim_2.d_year"
+          ->  Gather Merge  (cost=464307.98..798385.42 rows=2400416 width=223) (actual time=3846.736..5294.126 rows=201911 loops=1)
+                Workers Planned: 2
+                Workers Launched: 2
+                ->  Partial GroupAggregate  (cost=463307.95..520317.83 rows=1200208 width=223) (actual time=3811.545..5070.760 rows=67304 loops=3)
+"                      Group Key: customer_2.c_customer_id, customer_2.c_first_name, customer_2.c_last_name, customer_2.c_preferred_cust_flag, customer_2.c_birth_country, customer_2.c_login, customer_2.c_email_address, date_dim_2.d_year"
+                      ->  Sort  (cost=463307.95..466308.47 rows=1200208 width=213) (actual time=3811.486..4459.794 rows=895151 loops=3)
+"                            Sort Key: customer_2.c_customer_id, customer_2.c_first_name, customer_2.c_last_name, customer_2.c_preferred_cust_flag, customer_2.c_birth_country, customer_2.c_login, customer_2.c_email_address, date_dim_2.d_year"
+                            Sort Method: external merge  Disk: 153200kB
+                            Worker 0:  Sort Method: external merge  Disk: 152792kB
+                            Worker 1:  Sort Method: external merge  Disk: 155552kB
+                            ->  Parallel Hash Join  (cost=8015.36..95976.83 rows=1200208 width=213) (actual time=755.723..1126.744 rows=895151 loops=3)
+                                  Hash Cond: (store_sales.ss_sold_date_sk = date_dim_2.d_date_sk)
+                                  ->  Parallel Hash Join  (cost=5643.54..90454.28 rows=1200208 width=213) (actual time=747.668..987.752 rows=916884 loops=3)
+                                        Hash Cond: (store_sales.ss_customer_sk = customer_2.c_customer_sk)
+                                        ->  Parallel Seq Scan on store_sales  (cost=0.00..63698.08 rows=1200208 width=30) (actual time=0.083..151.228 rows=960135 loops=3)
+                                        ->  Parallel Hash  (cost=3356.24..3356.24 rows=58824 width=191) (actual time=433.036..433.038 rows=33333 loops=3)
+                                              Buckets: 32768  Batches: 8  Memory Usage: 2400kB
+                                              ->  Parallel Seq Scan on customer customer_2  (cost=0.00..3356.24 rows=58824 width=191) (actual time=285.015..292.982 rows=33333 loops=3)
+                                  ->  Parallel Hash  (cost=1834.70..1834.70 rows=42970 width=8) (actual time=7.856..7.858 rows=24350 loops=3)
+                                        Buckets: 131072  Batches: 1  Memory Usage: 3904kB
+                                        ->  Parallel Seq Scan on date_dim date_dim_2  (cost=0.00..1834.70 rows=42970 width=8) (actual time=0.013..7.726 rows=73049 loops=1)
+  ->  Incremental Sort  (cost=1334371.54..250168626.70 rows=1793453829 width=334) (actual time=53320.070..53320.077 rows=4 loops=1)
+"        Sort Key: t_s_secyear.customer_id, t_s_secyear.customer_first_name, t_s_secyear.customer_last_name, t_s_secyear.customer_birth_country"
+        Presorted Key: t_s_secyear.customer_id
+        Full-sort Groups: 1  Sort Method: quicksort  Average Memory: 25kB  Peak Memory: 25kB
+        ->  Merge Join  (cost=207867.71..122691858.91 rows=1793453829 width=334) (actual time=10714.117..53320.002 rows=4 loops=1)
+              Merge Cond: (t_c_firstyear.customer_id = t_s_secyear.customer_id)
+              Join Filter: ((t_c_secyear.year_total / t_c_firstyear.year_total) > (t_s_secyear.year_total / t_s_firstyear.year_total))
+              Rows Removed by Join Filter: 1
+              ->  Merge Join  (cost=67340.71..1480341.29 rows=3112550 width=336) (actual time=4987.295..47552.238 rows=50 loops=1)
+                    Merge Cond: (t_c_firstyear.customer_id = t_c_secyear.customer_id)
+                    Join Filter: ((t_c_secyear.year_total / t_c_firstyear.year_total) > (t_w_secyear.year_total / t_w_firstyear.year_total))
+                    Rows Removed by Join Filter: 50
+                    ->  Nested Loop  (cost=34444.50..1236699.65 rows=259092 width=300) (actual time=4846.519..47512.462 rows=317 loops=1)
+                          Join Filter: (t_w_firstyear.customer_id = t_c_firstyear.customer_id)
+                          Rows Removed by Join Filter: 33598039
+                          ->  Merge Join  (cost=34444.50..34773.96 rows=21564 width=200) (actual time=1671.335..1702.928 rows=1276 loops=1)
+                                Merge Cond: (t_w_firstyear.customer_id = t_w_secyear.customer_id)
+                                ->  Sort  (cost=18045.91..18048.91 rows=1199 width=100) (actual time=1658.926..1661.482 rows=11077 loops=1)
+                                      Sort Key: t_w_firstyear.customer_id
+                                      Sort Method: quicksort  Memory: 1250kB
+                                      ->  CTE Scan on year_web_sales t_w_firstyear  (cost=0.00..17984.60 rows=1199 width=100) (actual time=1171.312..1653.516 rows=11077 loops=1)
+                                            Filter: ((year_total > '0'::numeric) AND (dyear = 1999))
+                                            Rows Removed by Filter: 45572
+                                ->  Sort  (cost=16398.59..16407.58 rows=3597 width=100) (actual time=12.373..16.495 rows=11153 loops=1)
+                                      Sort Key: t_w_secyear.customer_id
+                                      Sort Method: quicksort  Memory: 1256kB
+                                      ->  CTE Scan on year_web_sales t_w_secyear  (cost=0.00..16186.14 rows=3597 width=100) (actual time=0.024..8.118 rows=11153 loops=1)
+                                            Filter: (dyear = 2000)
+                                            Rows Removed by Filter: 45496
+                          ->  CTE Scan on year_catalog_sales t_c_firstyear  (cost=0.00..36038.15 rows=2403 width=100) (actual time=1.592..34.757 rows=26331 loops=1276)
+                                Filter: ((year_total > '0'::numeric) AND (dyear = 1999))
+                                Rows Removed by Filter: 110647
+                    ->  Sort  (cost=32896.20..32914.22 rows=7208 width=100) (actual time=26.960..29.893 rows=27378 loops=1)
+                          Sort Key: t_c_secyear.customer_id
+                          Sort Method: quicksort  Memory: 2913kB
+                          ->  CTE Scan on year_catalog_sales t_c_secyear  (cost=0.00..32434.33 rows=7208 width=100) (actual time=0.004..18.345 rows=27449 loops=1)
+                                Filter: (dyear = 2000)
+                                Rows Removed by Filter: 109529
+              ->  Materialize  (cost=140527.01..146637.12 rows=345720 width=466) (actual time=5726.440..5764.592 rows=14344 loops=1)
+                    ->  Merge Join  (cost=140527.01..145772.82 rows=345720 width=466) (actual time=5726.399..5756.892 rows=14344 loops=1)
+                          Merge Cond: (t_s_firstyear.customer_id = t_s_secyear.customer_id)
+                          ->  Sort  (cost=72306.04..72318.04 rows=4801 width=100) (actual time=5678.777..5680.536 rows=37306 loops=1)
+                                Sort Key: t_s_firstyear.customer_id
+                                Sort Method: quicksort  Memory: 3892kB
+                                ->  CTE Scan on year_store_sales t_s_firstyear  (cost=0.00..72012.48 rows=4801 width=100) (actual time=3846.797..5658.011 rows=37708 loops=1)
+                                      Filter: ((year_total > '0'::numeric) AND (dyear = 1999))
+                                      Rows Removed by Filter: 152873
+                          ->  Materialize  (cost=68220.97..68292.98 rows=14402 width=366) (actual time=47.586..59.288 rows=37855 loops=1)
+                                ->  Sort  (cost=68220.97..68256.98 rows=14402 width=366) (actual time=47.578..55.876 rows=37855 loops=1)
+                                      Sort Key: t_s_secyear.customer_id
+                                      Sort Method: external merge  Disk: 3576kB
+                                      ->  CTE Scan on year_store_sales t_s_secyear  (cost=0.00..64811.23 rows=14402 width=366) (actual time=0.045..28.495 rows=38252 loops=1)
+                                            Filter: (dyear = 2000)
+                                            Rows Removed by Filter: 152329
+Planning Time: 3.698 ms
+JIT:
+  Functions: 271
+"  Options: Inlining true, Optimization true, Expressions true, Deforming true"
+"  Timing: Generation 29.978 ms, Inlining 316.973 ms, Optimization 2432.354 ms, Emission 1709.535 ms, Total 4488.839 ms"
+Execution Time: 55486.462 ms
